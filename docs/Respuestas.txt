@@ -1,0 +1,36 @@
+1. ¿Qué tipo de relación existe entre Agenda y Contacto?
+
+La relación entre ellas es una asociación de uno a muchos. Esto debido a que una agenda 
+contiene un conjunto de contactos (List<Contacto>), por lo que una misma agenda puede albergar 
+y gestionar varios contactos. No obstante, los contactos pueden existir independientemente de 
+la agena, puesto que no se crean dentro de ella de forma obligatoria ni dependen completamente 
+de su ciclo de vida. 
+
+2. ¿Qué tipo de relaciónexiste entre Contacto y Telefono?
+
+La relación entre ella es una compisición, puesto que un contacto tiene una lista de teléfonos 
+y estos se crean y gestionan desde el propio contacto. Un téledono no tiene sentido sin un 
+contacto asociado y no se reutiliza en otros contactos. Por ello, el ciclo de vida del 
+teléfono depende totalmente del contacto. 
+
+3. ¿Qué tipo de relación existe entre Contacto y Dirección?
+
+La relación enetre ella es también una composición.Cada contacto tiene exactamente una 
+dirección y esta se crea en el momento de crear el contacto.La dirección no existe de forma 
+independiente ni se comparte con otros contactos, por lo que depende completamente del 
+contacto al que pertenece. 
+
+4. ¿Por qué los tipos TipoTelefono y TipoVia se modelan como enumerados?
+
+Los TiposVia y TipoTelefono se modelan como eneumerados porque representan un conjunto 
+cerrado y limitado de valores posibles. El uso de enumerados evita errores, ya que solo 
+permite usar valores predefinidos, mejora la legibilidad del código y facilita del 
+mantenimiento. Además, refleja mejor el dominio del problema, ya que los tipos de teléfono y 
+de vía son conocidos y no cambian dinámicamente.  
+
+5. ¿Qué relaciones del diagrama son asociaciones simples y cuáles podrían intrepertarse como 
+agregación o composción?
+Podría considerar como asociación simple: Agenda - Contacto.
+Y composición: Contacto - Telefono Contacto - Direccion (Debido a que los objetos 
+independientes (Telefono y Direccion) no tienen sentido sin el objeto principal (Contacto) y 
+su ciclo de vida esta ligado a el).
